@@ -1,12 +1,9 @@
 import 'package:evently_online_sat/core/resources/assets_manager.dart';
-import 'package:evently_online_sat/core/resources/colors_manager.dart';
-import 'package:evently_online_sat/core/routes_manager/app_routes.dart';
 import 'package:evently_online_sat/core/widgets/custom_elevated_button.dart';
 import 'package:evently_online_sat/core/widgets/custom_text_button.dart';
 import 'package:evently_online_sat/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
