@@ -5,7 +5,6 @@ import 'package:evently_online_sat/core/widgets/custom_elevated_button.dart';
 import 'package:evently_online_sat/core/widgets/custom_text_button.dart';
 import 'package:evently_online_sat/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -21,7 +20,7 @@ class _RegisterState extends State<Register> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController ;
  late TextEditingController _rePasswordController;
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   void initState() {
 
