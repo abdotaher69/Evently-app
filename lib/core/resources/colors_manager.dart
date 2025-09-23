@@ -8,4 +8,5 @@ abstract class ColorsManager{
   static const red = Color(0xFFE43E2B);
   static const black1C = Color(0xFF1C1C1C);
   static const white = Color(0xFFFFFFFF);
+  static const darkBlue = Color(0xFF101127);
 }
