@@ -34,7 +34,7 @@ class _CreateEventState extends State<CreateEvent> {
               ),
               SizedBox(height: 16.h),
               CustomTabBar(
-                onCategoryItemClicked: (category) {
+                onCategoryItemClicked: ( CategoryModel category) {
                   setState(() {
                     selectedCategory = category;
                   });

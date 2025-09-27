@@ -30,7 +30,7 @@ class ThemeManager {
 
       )
     ),
-    bottomAppBarTheme: BottomAppBarTheme(
+    bottomAppBarTheme: BottomAppBarThemeData(
       color: ColorsManager.blue,
       elevation: 16,
       shape: CircularNotchedRectangle(),
@@ -147,7 +147,7 @@ class ThemeManager {
       onSecondary: ColorsManager.whiteBlue,
 
     ),
-    bottomAppBarTheme: BottomAppBarTheme(
+    bottomAppBarTheme: BottomAppBarThemeData(
       color: ColorsManager.blue,
       elevation: 16,
       shape: CircularNotchedRectangle(),
