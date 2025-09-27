@@ -1,7 +1,9 @@
 import 'package:evently_online_sat/core/resources/colors_manager.dart';
 import 'package:evently_online_sat/core/widgets/custom_tab_bar.dart';
 import 'package:evently_online_sat/core/widgets/custom_tab_item.dart';
+import 'package:evently_online_sat/core/widgets/event_item.dart' show EventItem;
 import 'package:evently_online_sat/models/category_model.dart';
+import 'package:evently_online_sat/models/event_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,37 +49,62 @@ class _HomeTabState extends State<HomeTab> {
                         ),
                         Text(
                           "Moo Saad",
-                          style: Theme.of(context).textTheme.headlineLarge
+                          style: Theme.of(context).textTheme.headlineLarge,
                         ),
                         Row(
                           children: [
                             Icon(Icons.location_on, color: ColorsManager.white),
                             Text(
                               "Cairo, Egypt",
-                              style:Theme.of(context).textTheme.headlineSmall
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ],
                         ),
                       ],
                     ),
                     Spacer(),
-                    Icon(Icons.light_mode, color: ColorsManager.white),
+                   IconButton(onPressed: (){}, icon:  Icon(Icons.light_mode, color: ColorsManager.white)),
                     SizedBox(width: 10.w),
-                    Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "En",
-                          style: Theme.of(context).textTheme.headlineMedium
+                    InkWell(
+                      onTap: (){},
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "En",
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-               SizedBox(height: 12.h,),
-               CustomTabBar(categories: CategoryModel.categoriesWithAll, selectedBgColor: Theme.of(context).colorScheme.primary, selectedFgColor: Theme.of(context).colorScheme.onPrimary, unSelectedBgColor:Theme.of(context).colorScheme.secondary, unSelectedFgColor: Theme.of(context).colorScheme.onSecondary)
+                SizedBox(height: 12.h),
+                CustomTabBar(
+                  categories: CategoryModel.categoriesWithAll,
+                  selectedBgColor: Theme.of(context).colorScheme.primary,
+                  selectedFgColor: Theme.of(context).colorScheme.onPrimary,
+                  unSelectedBgColor: Theme.of(context).colorScheme.secondary,
+                  unSelectedFgColor: Theme.of(context).colorScheme.onSecondary,
+                ),
+
+                //Expanded(child: ListView.builder(itemBuilder: (context, index)=> , itemCount: 20,))
               ],
             ),
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) => EventItem(
+              event: EventModel(
+                category: CategoryModel.categories[2],
+                title: "Meeting for Updating The Development Method ",
+                description: "Meeting for Updating The Development Method ",
+                dateTime: DateTime.now(),
+                timeOfDay: TimeOfDay.now(),
+              ),
+            ),
+            itemCount: 20,
           ),
         ),
       ],

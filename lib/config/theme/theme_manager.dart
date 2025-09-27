@@ -16,6 +16,14 @@ class ThemeManager {
       onSecondary: ColorsManager.whiteBlue,
 
     ),
+    cardTheme: CardThemeData(
+      color: ColorsManager.whiteBlue,
+      elevation: 8,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.r),
+
+      )
+    ),
     bottomAppBarTheme: BottomAppBarTheme(
       color: ColorsManager.blue,
       elevation: 16,
@@ -103,6 +111,11 @@ class ThemeManager {
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
         color: ColorsManager.black1C,
+      ),
+      titleSmall: GoogleFonts.inter(
+        fontSize: 14.sp,
+        color: ColorsManager.black1C,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );
