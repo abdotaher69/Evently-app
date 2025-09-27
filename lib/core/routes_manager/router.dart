@@ -1,8 +1,8 @@
 import 'package:evently_online_sat/core/routes_manager/app_routes.dart';
 import 'package:evently_online_sat/features/authentication/login/login.dart';
 import 'package:evently_online_sat/features/authentication/register/register.dart';
-import 'package:evently_online_sat/features/onbording/on_barding_screen.dart';
-import 'package:evently_online_sat/features/splach/splach_screen.dart';
+import 'package:evently_online_sat/features/create_event/create_event.dart';
+import 'package:evently_online_sat/features/main_layout/main_layout.dart';
 import 'package:flutter/cupertino.dart';
 
 class RoutesManger {
@@ -16,13 +16,13 @@ class RoutesManger {
         {
           return CupertinoPageRoute(builder: (context) => Login());
         }
-        case AppRoutes.splash: 
+      case AppRoutes.mainLayout:
         {
-          return CupertinoPageRoute(builder: (context) => Splach());
-        }   
-        case AppRoutes.onBoarding: 
+          return CupertinoPageRoute(builder: (context) => MainLayout());
+        }
+      case AppRoutes.createEvent:
         {
-          return CupertinoPageRoute(builder: (context) => OnBarding());
+          return CupertinoPageRoute(builder: (context) => CreateEvent());
         }
     }
     return null;

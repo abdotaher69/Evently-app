@@ -24,11 +24,10 @@ class Evently extends StatelessWidget {
         debugShowCheckedModeBanner: false,
 
         onGenerateRoute: RoutesManger.router,
-
-        initialRoute: AppRoutes.splash,
-        
+        initialRoute: AppRoutes.mainLayout,
         theme: ThemeManager.light,
         darkTheme: ThemeManager.dark,
+        themeMode: ThemeMode.light,
         locale: Locale("en"),
       ),
 
