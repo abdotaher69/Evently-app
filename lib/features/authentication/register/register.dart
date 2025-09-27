@@ -45,19 +45,14 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).viewInsets.bottom);
+    print(MediaQuery.of(context).viewInsets);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: EdgeInsets.only(
-          left: 8,
-          right: 8,
-          top: 47,
-          bottom: MediaQuery.of(context).viewInsets.top,
-        ),
-        child: SingleChildScrollView(
-          child: Form(
-            key: _formKey,
+        padding: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: MediaQuery.of(context).viewInsets.bottom),
+        child: Form(
+          key: _formKey,
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 Image.asset(ImageAssets.eventlyLogo),
@@ -124,6 +119,8 @@ class _RegisterState extends State<Register> {
                       ),
                       keyboardType: TextInputType.visiblePassword,
                     ),
+
+
                     SizedBox(height: 16.h),
                     CustomElevatedButton(
                       text: "Create Account",

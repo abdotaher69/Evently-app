@@ -1,3 +1,4 @@
+import 'package:evently_online_sat/core/routes_manager/app_routes.dart';
 import 'package:evently_online_sat/features/main_layout/favourite/favourite_tab.dart';
 import 'package:evently_online_sat/features/main_layout/home/home_tab.dart';
 import 'package:evently_online_sat/features/main_layout/map/map_tab.dart';
@@ -27,7 +28,9 @@ class _MainLayoutState extends State<MainLayout> {
   }
 
   FloatingActionButton _buildFab() {
-    return FloatingActionButton(onPressed: () {}, child: Icon(Icons.add));
+    return FloatingActionButton(onPressed: () {
+      Navigator.pushNamed(context, AppRoutes.createEvent);
+    }, child: Icon(Icons.add));
   }
 
   BottomAppBar _buildBottomAppBar() {
