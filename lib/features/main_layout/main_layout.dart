@@ -65,7 +65,7 @@ class _MainLayoutState extends State<MainLayout> {
             icon: Icon(
               selectedIndex == 3 ? Icons.person : Icons.person_2_outlined,
             ),
-            label: "Person",
+            label: "Profile",
           ),
         ],
       ),
