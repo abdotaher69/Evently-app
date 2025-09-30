@@ -27,11 +27,12 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  TextFormField(
+
       maxLines: maxLines,
       controller: controller,
       validator: validator,
       obscureText: isSecure,
-      style: GoogleFonts.inter(fontSize: 16.sp, color: ColorsManager.black1C, fontWeight: FontWeight.w400),
+      style: Theme.of(context).textTheme.bodySmall,
       keyboardType: keyboardType,
       decoration: InputDecoration(
         labelText: labelText,

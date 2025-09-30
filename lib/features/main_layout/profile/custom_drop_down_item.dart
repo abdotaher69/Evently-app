@@ -41,11 +41,14 @@ final List<String> menuItems;
                 Spacer(),
 
                 DropdownButton(
+                  dropdownColor: ColorsManager.white,
+
                   underline: Container(),
                   items: menuItems
                       .map(
                         (item) =>
-                        DropdownMenuItem(value: item, child: Text(item)),
+                        DropdownMenuItem(
+                            value: item, child: Text(item, style: GoogleFonts.inter(color: ColorsManager.black1C, fontSize: 14.sp, fontWeight: FontWeight.w400),)),
                   )
                       .toList(),
                   onChanged: (selectedItem) {

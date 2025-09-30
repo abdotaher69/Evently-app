@@ -23,7 +23,7 @@ class Evently extends StatelessWidget {
         initialRoute: AppRoutes.mainLayout,
         theme: ThemeManager.light,
         darkTheme: ThemeManager.dark,
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         locale: Locale("en"),
       ),
 

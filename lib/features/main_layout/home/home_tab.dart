@@ -82,10 +82,10 @@ class _HomeTabState extends State<HomeTab> {
                 SizedBox(height: 12.h),
                 CustomTabBar(
                   categories: CategoryModel.categoriesWithAll,
-                  selectedBgColor: Theme.of(context).colorScheme.primary,
-                  selectedFgColor: Theme.of(context).colorScheme.onPrimary,
-                  unSelectedBgColor: Theme.of(context).colorScheme.secondary,
-                  unSelectedFgColor: Theme.of(context).colorScheme.onSecondary,
+                  selectedBgColor: ColorsManager.whiteBlue,
+                  selectedFgColor: ColorsManager.blue,
+                  unSelectedBgColor: Colors.transparent,
+                  unSelectedFgColor: ColorsManager.whiteBlue,
                 ),
 
                 //Expanded(child: ListView.builder(itemBuilder: (context, index)=> , itemCount: 20,))
