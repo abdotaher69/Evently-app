@@ -1,6 +1,7 @@
 import 'package:evently_online_sat/config/theme/theme_manager.dart';
 import 'package:evently_online_sat/core/routes_manager/app_routes.dart';
 import 'package:evently_online_sat/core/routes_manager/router.dart';
+import 'package:evently_online_sat/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,8 +24,13 @@ class Evently extends StatelessWidget {
         initialRoute: AppRoutes.mainLayout,
         theme: ThemeManager.light,
         darkTheme: ThemeManager.dark,
-        themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.light,
         locale: Locale("en"),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: [
+          Locale("en"),
+          Locale("ar")
+        ],
       ),
 
     );

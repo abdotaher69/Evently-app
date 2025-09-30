@@ -1,5 +1,6 @@
 import 'package:evently_online_sat/core/resources/colors_manager.dart';
 import 'package:evently_online_sat/core/widgets/event_item.dart';
+import 'package:evently_online_sat/l10n/app_localizations.dart' show AppLocalizations;
 import 'package:evently_online_sat/models/category_model.dart' show CategoryModel;
 import 'package:evently_online_sat/models/event_model.dart' show EventModel;
 import 'package:flutter/material.dart';
@@ -11,6 +12,8 @@ class FavouriteTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppLocalizations appLocalizations = AppLocalizations.of(context)!;
+
     return SafeArea(
       child: Column(
         children: [
@@ -19,7 +22,7 @@ class FavouriteTab extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.search, color: ColorsManager.blue,),
-                hintText: "Search for Event",
+                hintText: appLocalizations.search_for_event,
                 hintStyle: GoogleFonts.inter(fontSize: 14.sp, color: ColorsManager.blue, fontWeight: FontWeight.bold
                 ),
                 enabledBorder: OutlineInputBorder(
@@ -37,7 +40,7 @@ class FavouriteTab extends StatelessWidget {
               padding: EdgeInsets.zero,
               itemCount: 20,
               itemBuilder: (context, index)=> EventItem(event: EventModel(
-            category: CategoryModel.categories[2],
+            category: CategoryModel.getCategories(context)[2],
             title: "Meeting for Updating The Development Method ",
             description: "Meeting for Updating The Development Method ",
             dateTime: DateTime.now(),
