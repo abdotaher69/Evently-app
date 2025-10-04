@@ -5,9 +5,12 @@ import 'package:evently_online_sat/core/widgets/event_item.dart' show EventItem;
 import 'package:evently_online_sat/l10n/app_localizations.dart';
 import 'package:evently_online_sat/models/category_model.dart';
 import 'package:evently_online_sat/models/event_model.dart';
+import 'package:evently_online_sat/providers/language_provider.dart';
+import 'package:evently_online_sat/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
@@ -22,7 +25,8 @@ class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     AppLocalizations appLocalizations = AppLocalizations.of(context)!;
-
+var themeProvider = Provider.of<ThemeProvider>(context);
+var langProvider = Provider.of<LanguageProvider>(context);
     return Column(
       children: [
         Container(
@@ -66,15 +70,19 @@ class _HomeTabState extends State<HomeTab> {
                       ],
                     ),
                     Spacer(),
-                   IconButton(onPressed: (){}, icon:  Icon(Icons.light_mode, color: ColorsManager.white)),
+                   IconButton(onPressed: (){
+                     themeProvider.changeAppTheme(themeProvider.isDark ? ThemeMode.light : ThemeMode.dark);
+                   }, icon:  Icon(themeProvider.isDark ? Icons.dark_mode_rounded: Icons.light_mode, color: ColorsManager.white)),
                     SizedBox(width: 10.w),
                     InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        langProvider.changeAppLanguage(langProvider.isEnglish ? "ar": "en");
+                      },
                       child: Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "En",
+                            langProvider.isEnglish ?"En": "Ar",
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
                         ),
