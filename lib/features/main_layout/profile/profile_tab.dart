@@ -65,7 +65,7 @@ class ProfileTab extends StatelessWidget {
         CustomDropDownItem(label: appLocalizations.language,selectedLabel: "English",menuItems: ["English", "Arabic"],)
 
         ,Spacer(
-          flex: 7,
+          flex: (3.h).toInt(),
         )
         ,Container(
           margin: REdgeInsets.symmetric(horizontal: 16),
@@ -86,7 +86,7 @@ class ProfileTab extends StatelessWidget {
        )),
      ),
         Spacer(
-          flex: 3,
+          flex: (3.h).toInt(),
         )
 
 
