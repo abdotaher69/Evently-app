@@ -1,4 +1,3 @@
-import 'package:evently_online_sat/config/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 class ThemeProvider extends ChangeNotifier {

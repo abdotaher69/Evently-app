@@ -1,6 +1,5 @@
 import 'package:evently_online_sat/core/resources/colors_manager.dart';
 import 'package:evently_online_sat/core/widgets/custom_tab_bar.dart';
-import 'package:evently_online_sat/core/widgets/custom_tab_item.dart';
 import 'package:evently_online_sat/core/widgets/event_item.dart' show EventItem;
 import 'package:evently_online_sat/l10n/app_localizations.dart';
 import 'package:evently_online_sat/models/category_model.dart';
@@ -9,7 +8,6 @@ import 'package:evently_online_sat/providers/language_provider.dart';
 import 'package:evently_online_sat/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class HomeTab extends StatefulWidget {

@@ -8,7 +8,6 @@ import 'package:evently_online_sat/core/widgets/custom_text_form_field.dart';
 import 'package:evently_online_sat/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatefulWidget {

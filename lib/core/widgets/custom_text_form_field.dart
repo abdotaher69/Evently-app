@@ -1,7 +1,4 @@
-import 'package:evently_online_sat/core/resources/colors_manager.dart' ;
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({super.key,
